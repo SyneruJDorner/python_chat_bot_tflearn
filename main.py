@@ -7,12 +7,16 @@ from ai_module import _install as install
 
 def main():
     if (len(sys.argv) >= 2):
-        if (str(sys.argv[1]).lower() == "train"):
-            training_module.train()
-            return
-        if (str(sys.argv[1]).lower() == "install"):
+        arg = str(sys.argv[1]).lower()
+
+        if (arg == "install"):
             install.install_all()
             return
+
+        if (arg == "train"):
+            training_module.train()
+            return
+            
     chat_module.chat()
 
 if __name__ == "__main__":

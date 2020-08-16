@@ -1,3 +1,4 @@
+import os
 import nltk
 from nltk.stem import PorterStemmer
 stemmer = PorterStemmer()
@@ -7,7 +8,12 @@ import pickle
 import json
 from ai_module.ai_module import brain
 
-def train():   
+def train():
+    trained_path = os.path.join(os.getcwd(), "trained_data")
+
+    if not os.path.exists(trained_path):
+        os.makedirs(trained_path)
+    
     with open("training_data\\intents.json") as file:
         data = json.load(file)
 
