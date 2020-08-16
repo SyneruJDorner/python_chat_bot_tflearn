@@ -9,6 +9,12 @@ def main():
     if (len(sys.argv) >= 2):
         arg = str(sys.argv[1]).lower()
 
+        if (arg == "help"):
+            f = open('ai_module/help.txt', 'r')
+            file_contents = f.read()
+            print(file_contents)
+            return
+
         if (arg == "install"):
             install.install_all()
             return
