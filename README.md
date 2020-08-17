@@ -1,8 +1,8 @@
 # python_chat_bot
 **Requires:**<br/>
->Python (64-bit only due to tensorflow)<br/>
->>3.7.2<br/>
->>3.7.4<br/>
+Python (64-bit only due to tensorflow)<br/>
+>3.7.2<br/>
+>3.7.4<br/>
 <br/>
 **How to run it:**<br/>
 Use 'python .\main.py help' real all about the bot and exe args.<br/>
