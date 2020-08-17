@@ -1,4 +1,4 @@
-# python_chat_bot
+# python chat bot (using tflearn)
 **Requires:**<br/>
 Python (64-bit only due to tensorflow)<br/>
 >3.7.0 - 3.7.8<br/>
