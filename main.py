@@ -12,11 +12,14 @@ def main():
         if (arg == "help"):
             f = open('ai_module/help.txt', 'r')
             file_contents = f.read()
-            print(file_contents)
             return
 
         if (arg == "install"):
             install.install_all()
+            return
+
+        if (arg == "clean"):
+            install.clean()
             return
 
         if (arg == "train"):
