@@ -11,15 +11,17 @@
 
 import sys, subprocess, os, shutil
 
-def install(package):
+def install(package, *args):
+    install_string = [sys.executable, "-m", "pip", "install", package]
+    install_string = install_string + list(args)
     subprocess.check_call([sys.executable, "-m", "pip", "install", package])
 
 def install_all():
-    install('nltk')
-    install('numpy==1.16.4')
-    install('tensorflow==1.14.0')
-    install('tflearn')
-    install('windows-curses')
+    install('nltk', "--user")
+    install('numpy==1.16.4', "--user")
+    install('tensorflow==1.14.0', "--user")
+    install('tflearn', "--user")
+    install('windows-curses', "--user")
 
     import nltk
     nltk.download('punkt')
