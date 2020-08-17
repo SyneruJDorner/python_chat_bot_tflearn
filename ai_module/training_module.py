@@ -67,3 +67,4 @@ def train():
     model = brain(training, output)
     model.fit(training, output, n_epoch=1000, batch_size=8, show_metric=True)
     model.save("trained_data\\model.tflearn")
+    print("Training is completed!")
