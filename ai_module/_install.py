@@ -23,8 +23,12 @@ def install_all():
     install('tflearn', "--user")
     install('windows-curses', "--user")
 
-    import nltk
-    nltk.download('punkt')
+    try:
+        import nltk
+        nltk.download('punkt')
+    except ImportError:
+        print("Unable to import nltk and download 'punkt'")
+        pass
 
 def clean():
     folder = os.path.join(os.getcwd(), "trained_data")
