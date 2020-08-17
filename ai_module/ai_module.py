@@ -1,5 +1,8 @@
-import tensorflow
-import tflearn
+try:
+    import tensorflow
+    import tflearn
+except ImportError:
+    pass
 
 def brain(training, output):
     tensorflow.reset_default_graph()

@@ -1,9 +1,9 @@
 import sys
+from ai_module import _install as install
 
 import ai_module.ai_logging
 from ai_module import training_module
 from ai_module import chat_module
-from ai_module import _install as install
 
 def main():
     if (len(sys.argv) >= 2):

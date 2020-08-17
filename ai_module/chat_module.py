@@ -1,12 +1,15 @@
-import nltk
-from nltk.stem import PorterStemmer
-stemmer = PorterStemmer()
+try:
+    import nltk
+    from nltk.stem import PorterStemmer
+    stemmer = PorterStemmer()
 
-import numpy
-import pickle
-import random
-from ai_module.ai_module import brain
-import json
+    import numpy
+    import pickle
+    import random
+    from ai_module.ai_module import brain
+    import json
+except ImportError:
+    pass
 
 def bag_of_words(s, words):
     bag = [0 for _ in range(len(words))]

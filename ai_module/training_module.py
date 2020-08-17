@@ -1,12 +1,15 @@
-import os
-import nltk
-from nltk.stem import PorterStemmer
-stemmer = PorterStemmer()
+try:
+    import os
+    import nltk
+    from nltk.stem import PorterStemmer
+    stemmer = PorterStemmer()
 
-import numpy
-import pickle
-import json
-from ai_module.ai_module import brain
+    import numpy
+    import pickle
+    import json
+    from ai_module.ai_module import brain
+except ImportError:
+    pass
 
 def train():
     trained_path = os.path.join(os.getcwd(), "trained_data")
